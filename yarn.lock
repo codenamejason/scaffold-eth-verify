@@ -1500,10 +1500,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/hashes@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@noble/hashes@npm:1.4.0"
+  checksum: 8ba816ae26c90764b8c42493eea383716396096c5f7ba6bea559993194f49d80a73c081f315f4c367e51bd2d5891700bcdfa816b421d24ab45b41cb03e4f3342
+  languageName: node
+  linkType: hard
+
 "@noble/secp256k1@npm:1.7.1, @noble/secp256k1@npm:~1.7.0":
   version: 1.7.1
   resolution: "@noble/secp256k1@npm:1.7.1"
   checksum: d2301f1f7690368d8409a3152450458f27e54df47e3f917292de3de82c298770890c2de7c967d237eff9c95b70af485389a9695f73eb05a43e2bd562d18b18cb
+  languageName: node
+  linkType: hard
+
+"@noble/secp256k1@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@noble/secp256k1@npm:2.1.0"
+  checksum: 447b7a04673b93e8182cb2c3f06fbdf2dd6792c22092b42715af01cb7aacbffdbe7e6319ecf3d9d44be7dac6085a603853e97252602f6bac8fba146163b5bb15
   languageName: node
   linkType: hard
 
@@ -2234,38 +2248,43 @@ __metadata:
   resolution: "@se-2/nextjs@workspace:packages/nextjs"
   dependencies:
     "@heroicons/react": ^2.0.11
+    "@noble/hashes": ^1.4.0
+    "@noble/secp256k1": ^2.1.0
     "@rainbow-me/rainbowkit": 2.1.2
     "@tanstack/react-query": ^5.28.6
-    "@trivago/prettier-plugin-sort-imports": ^4.3.0
+    "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/node": ^17.0.35
     "@types/nprogress": ^0
     "@types/react": ^18.0.9
     "@types/react-copy-to-clipboard": ^5.0.4
+    "@types/sha.js": ^2
     "@typescript-eslint/eslint-plugin": ^5.39.0
     "@uniswap/sdk-core": ^4.0.1
     "@uniswap/v2-sdk": ^3.0.1
-    abitype: 1.0.2
+    abitype: ^1.0.2
     autoprefixer: ^10.4.12
     blo: ^1.0.1
     burner-connector: ^0.0.8
     daisyui: 4.5.0
     eslint: ^8.15.0
     eslint-config-next: ^14.0.4
-    eslint-config-prettier: ^9.1.0
-    eslint-plugin-prettier: ^5.1.3
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-prettier: ^4.2.1
     next: ^14.0.4
     next-themes: ^0.2.1
     nprogress: ^0.2.0
     postcss: ^8.4.16
-    prettier: ^3.3.2
+    prettier: ^2.8.4
     qrcode.react: ^3.1.0
     react: ^18.2.0
     react-copy-to-clipboard: ^5.1.0
     react-dom: ^18.2.0
     react-hot-toast: ^2.4.0
+    sha.js: ^2.4.11
     tailwindcss: ^3.4.3
     type-fest: ^4.6.0
-    typescript: 5.1.6
+    typescript: ^5.1.6
+    uint8array-extras: ^1.3.0
     use-debounce: ^8.0.4
     usehooks-ts: ^2.13.0
     vercel: ^32.4.1
@@ -2593,7 +2612,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trivago/prettier-plugin-sort-imports@npm:^4.3.0":
+"@trivago/prettier-plugin-sort-imports@npm:^4.1.1":
   version: 4.3.0
   resolution: "@trivago/prettier-plugin-sort-imports@npm:4.3.0"
   dependencies:
@@ -2981,6 +3000,15 @@ __metadata:
   version: 7.5.3
   resolution: "@types/semver@npm:7.5.3"
   checksum: 349fdd1ab6c213bac5c991bac766bd07b8b12e63762462bb058740dcd2eb09c8193d068bb226f134661275f2022976214c0e727a4e5eb83ec1b131127c980d3e
+  languageName: node
+  linkType: hard
+
+"@types/sha.js@npm:^2":
+  version: 2.4.4
+  resolution: "@types/sha.js@npm:2.4.4"
+  dependencies:
+    "@types/node": "*"
+  checksum: e5917afe3116971c882b475298c7ca99aae69715057948526f805ca75dd67675eeaad7014f525c80e1243022923c496f52546164b90231285364f72aba874989
   languageName: node
   linkType: hard
 
@@ -3940,9 +3968,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"abitype@npm:1.0.2":
-  version: 1.0.2
-  resolution: "abitype@npm:1.0.2"
+"abitype@npm:^1.0.2":
+  version: 1.0.5
+  resolution: "abitype@npm:1.0.5"
   peerDependencies:
     typescript: ">=5.0.4"
     zod: ^3 >=3.22.0
@@ -3951,7 +3979,7 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 0986ec822ad279e7ea1d15398f88bad335a58419799f8ba80e3d5712fdd5a2b5858b387a1213d9da31571c3a42d10ca878a463cce11dae1bb17dbe4deeb40db4
+  checksum: 4a4865926e5e8e33e4fab0081a106ce4f627db30b4052fbc449e4707aea6d34d805d46c8d6d0a72234bdd9a2b4900993591515fc299bc57d393181c70dc0c19e
   languageName: node
   linkType: hard
 
@@ -6599,6 +6627,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-prettier@npm:^8.5.0":
+  version: 8.10.0
+  resolution: "eslint-config-prettier@npm:8.10.0"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: bin/cli.js
+  checksum: 153266badd477e49b0759816246b2132f1dbdb6c7f313ca60a9af5822fd1071c2bc5684a3720d78b725452bbac04bb130878b2513aea5e72b1b792de5a69fec8
+  languageName: node
+  linkType: hard
+
 "eslint-config-prettier@npm:^9.1.0":
   version: 9.1.0
   resolution: "eslint-config-prettier@npm:9.1.0"
@@ -6701,6 +6740,21 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: f166dd5fe7257c7b891c6692e6a3ede6f237a14043ae3d97581daf318fc5833ddc6b4871aa34ab7656187430170500f6d806895747ea17ecdf8231a666c3c2fd
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-prettier@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "eslint-plugin-prettier@npm:4.2.1"
+  dependencies:
+    prettier-linter-helpers: ^1.0.0
+  peerDependencies:
+    eslint: ">=7.28.0"
+    prettier: ">=2.0.0"
+  peerDependenciesMeta:
+    eslint-config-prettier:
+      optional: true
+  checksum: b9e839d2334ad8ec7a5589c5cb0f219bded260839a857d7a486997f9870e95106aa59b8756ff3f37202085ebab658de382b0267cae44c3a7f0eb0bcc03a4f6d6
   languageName: node
   linkType: hard
 
@@ -11659,7 +11713,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.1":
+"prettier@npm:^2.3.1, prettier@npm:^2.8.4":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -14047,16 +14101,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.1.6":
-  version: 5.1.6
-  resolution: "typescript@npm:5.1.6"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: b2f2c35096035fe1f5facd1e38922ccb8558996331405eb00a5111cc948b2e733163cc22fab5db46992aba7dd520fff637f2c1df4996ff0e134e77d3249a7350
-  languageName: node
-  linkType: hard
-
 "typescript@npm:^5.1.6":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
@@ -14074,16 +14118,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 2eee5c37cad4390385db5db5a8e81470e42e8f1401b0358d7390095d6f681b410f2c4a0c496c6ff9ebd775423c7785cdace7bcdad76c7bee283df3d9718c0f20
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@5.1.6#~builtin<compat/typescript>":
-  version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=a1c5e5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 21e88b0a0c0226f9cb9fd25b9626fb05b4c0f3fddac521844a13e1f30beb8f14e90bd409a9ac43c812c5946d714d6e0dee12d5d02dfc1c562c5aacfa1f49b606
   languageName: node
   linkType: hard
 
@@ -14138,6 +14172,13 @@ __metadata:
   version: 1.0.0
   resolution: "uid-promise@npm:1.0.0"
   checksum: 8769e9581a4ae88b2b43225a3f31730d1075935359df44bfd47618e0f7c8a83cd49c127916fa73f62bfaabcc800d2b3f334af9a02615123d4349372326792ede
+  languageName: node
+  linkType: hard
+
+"uint8array-extras@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "uint8array-extras@npm:1.3.0"
+  checksum: fd413f0a28551541a6ff84d77bc3a592c81d837e43b19ae45b6df121566d26e74cb92be68a1d92daed47d1ef23cd098f957bdc15ff84b0c3b6d8f26198cc3ea4
   languageName: node
   linkType: hard
 

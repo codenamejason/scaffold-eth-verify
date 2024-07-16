@@ -1,14 +1,14 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
+// import { Contract } from "ethers";
 
 /**
- * Deploys a contract named "YourContract" using the deployer account and
+ * Deploys a contract named "SiPPProvenance" using the deployer account and
  * constructor arguments set to the deployer address
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deploySiPPProvenance: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   /*
     On localhost, the deployer account is the one that comes with Hardhat, which is already funded.
 
@@ -20,12 +20,15 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     You can run the `yarn account` command to check your balance in every network.
   */
   const { deployer } = await hre.getNamedAccounts();
+  // const admin = "0x2C80552A6f2FD1b32d7783E4c5086899da3933b8";
+  // const app = "0x3f15B8c6F9939879Cb030D6dd935348E57109637";
+  const publicKey = "0x2C80552A6f2FD1b32d7783E4c5086899da3933b8";
   const { deploy } = hre.deployments;
 
-  await deploy("YourContract", {
+  await deploy("SipppAES", {
     from: deployer,
     // Contract constructor arguments
-    args: [deployer],
+    args: [publicKey],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
@@ -33,12 +36,12 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
-  console.log("👋 Initial greeting:", await yourContract.greeting());
+  // const sippProvenance = await hre.ethers.getContract<Contract>("SiPPProvenance", deployer);
+  // console.log("👋 Initial greeting:", await sippProvenance.greeting());
 };
 
-export default deployYourContract;
+export default deploySiPPProvenance;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["YourContract"];
+// e.g. yarn deploy --tags SiPPProvenance
+deploySiPPProvenance.tags = ["SiPPProvenance"];
