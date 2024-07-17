@@ -5,7 +5,6 @@ import { bytesToHex, hexToBytes } from '@noble/hashes/utils';
 // Function to derive the Ethereum address from a private key
 export function deriveEthereumAddress() {
   // Example private key (Use your actual private key here)
-  // const privateKeyHex = 'abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890';
   const privateKeyHex = process.env.SIPPP_APP_KEY.slice(2);
 
   // Step 1: Convert the private key from hex to a Uint8Array
